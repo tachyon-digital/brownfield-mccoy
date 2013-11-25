@@ -16,3 +16,6 @@ Game will be engineered to use and develop the following skill sets of players w
  3.) Decision Making
   -Project will sometimes involve choices made during timed situations where rapid decision making using provided
   information will be critical to success.
+4.) Ideas for Network types
+ -Make is so certian networks have certian password types. Simpler Networks may only have Alpha Numeric Passwords while
+ more encrypted networks need special characters and lengths.
