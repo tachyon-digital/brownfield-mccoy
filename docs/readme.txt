@@ -17,5 +17,7 @@ Game will be engineered to use and develop the following skill sets of players w
   -Project will sometimes involve choices made during timed situations where rapid decision making using provided
   information will be critical to success.
 4.) Ideas for Network types
- -Make is so certian networks have certian password types. Simpler Networks may only have Alpha Numeric Passwords while
- more encrypted networks need special characters and lengths.
+  -Make it so certian networks have certain password types. Simpler networks may only have alpha-numeric passwords while
+  more heavily encrypted networks need specific characters and lengths.
+  -Some networks may use public/private keys to access instead, requiring the player to develop a method of retrieving
+  a public key to gain access to the network.
