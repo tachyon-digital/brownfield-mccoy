@@ -1,0 +1,7 @@
+Problem: How do we simulate a networking environment in a simple manner?
+
+Algorithm 1: Create "nodes" as objects/classes that have attributes such as "Addresses" (Possibly use hex-based addressing to differentiate this from reality?) with each node being an individual "place" in the internetwork. Each node could be a server or router depending on attributes.
+  ex1:
+    router = node.create
+      router.addr = hexadecimal address (30 bit addressing) 000.000.000 through 200.200.200. This gives a total of 512^3                      total addresses, or 134,217,728 total address, more than the total number of nodes we would realistic-                     ally be able to generate in the game.
+      router.type = determines whether the node is a transfer node or end note (transfer or end)
