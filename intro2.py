@@ -125,3 +125,4 @@ if default_node in ('n', 'no', 'N', 'No', 'NO'):
     #test print
     print(home_addr)
     player_node = files.nodes.Node(home_addr, 'end', '0x00.0x13F.0x40')
+    print("Derp")
