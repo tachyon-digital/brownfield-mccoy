@@ -17,3 +17,9 @@ Algorithm 1: Create "Password Cracking" mini-game similar to hacking in Fallout 
 
 Algorithm 2: Create "Moving Cipher" encryption mini-game, where players are forced to solve a math problem within a
   specific time-frame to move on.
+
+Problem: How do we create a multi-player environment for the game?
+
+Algorithm 1: Create a server/client system where a chat-style messaging system can be used between players. Have each
+  "node" be effected by any player currently online and relay those changes to all players actively. This could allow
+  for some cooperative as well as competitive play, where players either work together or race each other.
