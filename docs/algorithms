@@ -3,5 +3,17 @@ Problem: How do we simulate a networking environment in a simple manner?
 Algorithm 1: Create "nodes" as objects/classes that have attributes such as "Addresses" (Possibly use hex-based addressing to differentiate this from reality?) with each node being an individual "place" in the internetwork. Each node could be a server or router depending on attributes.
   ex1:
     router = node.create
-      router.addr = hexadecimal address (30 bit addressing) 000.000.000 through 200.200.200. This gives a total of 512^3                      total addresses, or 134,217,728 total address, more than the total number of nodes we would realistic-                     ally be able to generate in the game.
-      router.type = determines whether the node is a transfer node or end note (transfer or end)
+      router.addr = hexadecimal address (30 bit addressing) 000.000.000 through 200.200.200. This gives a total of 512^3                      total addresses, or 134,217,728 total addresses, more than the total number of nodes we would realistic-                     ally be able to generate in the game.
+      router.type = determines whether the node is a transfer node or end node (transfer or end).
+      router.neighbor[] = List of neighbors by address. Helps for forwarding.
+    server = node.create
+      server.addr = hexadecimal address (30 bit addressing) 000.000.000 through 200.200.200. This gives a total of 512^3                      total addresses, or 134,217,728 total addresses, more than the total number of nodes we would realistic-                     ally be able to generate in the game.
+      server.type = determines whether the node is a transfer node or end node (transfer or end).
+      server.neighbor[] = List of neighbors by address. For servers this will be their GW router.
+
+Problem: How do we simulate a "secured" server beyond simple password security? How can we build "tools" for access?
+
+Algorithm 1: Create "Password Cracking" mini-game similar to hacking in Fallout 3+.
+
+Algorithm 2: Create "Moving Cipher" encryption mini-game, where players are forced to solve a math problem within a
+  specific time-frame to move on.
