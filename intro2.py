@@ -5,7 +5,6 @@ __author__ = 'George Spiceland'
 #This Py is a beginning and introductory Py to cover basic functions and terms for use with Python 3.3.2.
 import hashlib
 import getpass
-import random
 import files.nodes
 
 
@@ -118,11 +117,10 @@ if default_node in ('y', 'ye', 'yes', 'Y', 'Ye', 'Yes', 'YE', 'YES'):
 if default_node in ('n', 'no', 'N', 'No', 'NO'):
     print("What is your home's name?\n")
     home_name = input(" >")
-    h_a1 = '0x00'
-    h_a2 = str(hex(random.randint(0, 512)))
-    h_a3 = str(hex(random.randint(0, 512)))
-    home_addr = str(h_a1 + '.' + h_a2 + '.' + h_a3)
+    ha1 = '0x00'
+    ha2 = ''
+    ha3 = ''
+    home_addr = files.nodes.new_node(ha1, ha2, ha3)
+    player_node = files.nodes.Node(home_addr, 'end', '0x00.0x13F.0x40', home_name)
     #test print
-    print(home_addr)
-    player_node = files.nodes.Node(home_addr, 'end', '0x00.0x13F.0x40')
-    print("Derp")
+    print(player_node.addr, player_node.dname)
