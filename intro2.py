@@ -5,6 +5,8 @@ __author__ = 'George Spiceland'
 #This Py is a beginning and introductory Py to cover basic functions and terms for use with Python 3.3.2.
 import hashlib
 import getpass
+import random
+import files.nodes
 
 
 #A basic function for determining if users are new users or returning users.
@@ -108,4 +110,18 @@ if user_type == 'new':
     active_player = new_player_get()
 else:
     active_player = old_player_get()
-print("Successfully logged you in, ", active_player, ".")
+print("Successfully logged you in, [", active_player, "].\n")
+print("Do you have a default node?\n")
+default_node = input(" >")
+if default_node in ('y', 'ye', 'yes', 'Y', 'Ye', 'Yes', 'YE', 'YES'):
+    print('Sorry, that feature is not yet implemented.')
+if default_node in ('n', 'no', 'N', 'No', 'NO'):
+    print("What is your home's name?\n")
+    home_name = input(" >")
+    h_a1 = '0x00'
+    h_a2 = str(hex(random.randint(0, 512)))
+    h_a3 = str(hex(random.randint(0, 512)))
+    home_addr = str(h_a1 + '.' + h_a2 + '.' + h_a3)
+    #test print
+    print(home_addr)
+    player_node = files.nodes.Node(home_addr, 'end', '0x00.0x13F.0x40')
