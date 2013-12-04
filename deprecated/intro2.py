@@ -78,7 +78,7 @@ def new_player_get():
     h.update(usr_p.encode(encoding='utf-8', errors='strict') + usr_n.encode(encoding='utf-8', errors='strict'))
     usr_h = h.hexdigest()
     #Writes the hash to the credentials file, including the newline.
-    write2file(usr_h, 'files/credentials.txt', 'n')
+    write2file(usr_h, 'files-12-3-13/credentials.txt', 'n')
     return usr_n
 
 
@@ -96,7 +96,7 @@ def old_player_get():
         h.update(usr_p.encode(encoding='utf-8', errors='strict') + usr_n.encode(encoding='utf-8', errors='strict'))
         usr_h = h.hexdigest()
         #Checks the info against the credentials file.
-        temp_info = read0file("files/credentials.txt")
+        temp_info = read0file("files-12-3-13/credentials.txt")
         if usr_h in temp_info:
             print('Welcome back ', usr_n)
             return usr_n

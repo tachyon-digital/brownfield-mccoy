@@ -2,12 +2,22 @@ brownfield-mccoy
 =========================
 A Tachyon Digital project
 =========================
-11.26.2013
+12.03.2013
 
-TODO List
- 1.) Build 'login' screen and develop method for users to store gamestate.
-  Status: First Draft
- 2.) Build first 'room' and appropriate content.
-  Status: Pending
- 3.) Build first 'toolset' and appropriate content.
-  Status: Pending
+A Learning Lab environment for programming via the creation of a game involving using tools to break into
+secured networks.
+
+1.) Build console based system with "rooms" ala text-based RPGs
+Status: Pending
+
+2.) Develop basic skill sets to interact with the objects in a room.
+Status: Pending
+
+3.) Develop objects that appear in rooms dynamically to assist in text-based RPG feel.
+Status: Pending
+
+4.) Develop a method for adding persistence to the game.
+Status: Pending
+
+5.) Develop dynamic "puzzles" and dynamic "networks" as "mobs" and "dungeons" respectively.
+Status: Pending
