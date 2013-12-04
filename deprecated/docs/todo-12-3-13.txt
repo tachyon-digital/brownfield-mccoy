@@ -1,0 +1,13 @@
+brownfield-mccoy
+=========================
+A Tachyon Digital project
+=========================
+11.26.2013
+
+TODO List
+ 1.) Build 'login' screen and develop method for users to store gamestate.
+  Status: First Draft
+ 2.) Build first 'room' and appropriate content.
+  Status: Pending
+ 3.) Build first 'toolset' and appropriate content.
+  Status: Pending

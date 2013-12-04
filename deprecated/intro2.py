@@ -5,6 +5,7 @@ __author__ = 'George Spiceland'
 #This Py is a beginning and introductory Py to cover basic functions and terms for use with Python 3.3.2.
 import hashlib
 import getpass
+import files.nodes
 
 
 #A basic function for determining if users are new users or returning users.
@@ -77,7 +78,7 @@ def new_player_get():
     h.update(usr_p.encode(encoding='utf-8', errors='strict') + usr_n.encode(encoding='utf-8', errors='strict'))
     usr_h = h.hexdigest()
     #Writes the hash to the credentials file, including the newline.
-    write2file(usr_h, 'files/credentials.txt', 'n')
+    write2file(usr_h, 'files-12-3-13/credentials.txt', 'n')
     return usr_n
 
 
@@ -95,7 +96,7 @@ def old_player_get():
         h.update(usr_p.encode(encoding='utf-8', errors='strict') + usr_n.encode(encoding='utf-8', errors='strict'))
         usr_h = h.hexdigest()
         #Checks the info against the credentials file.
-        temp_info = read0file("files/credentials.txt")
+        temp_info = read0file("files-12-3-13/credentials.txt")
         if usr_h in temp_info:
             print('Welcome back ', usr_n)
             return usr_n
@@ -108,4 +109,18 @@ if user_type == 'new':
     active_player = new_player_get()
 else:
     active_player = old_player_get()
-print("Successfully logged you in, ", active_player, ".")
+print("Successfully logged you in, [", active_player, "].\n")
+print("Do you have a default node?\n")
+default_node = input(" >")
+if default_node in ('y', 'ye', 'yes', 'Y', 'Ye', 'Yes', 'YE', 'YES'):
+    print('Sorry, that feature is not yet implemented.')
+if default_node in ('n', 'no', 'N', 'No', 'NO'):
+    print("What is your home's name?\n")
+    home_name = input(" >")
+    ha1 = '0x00'
+    ha2 = ''
+    ha3 = ''
+    home_addr = files.nodes.new_node(ha1, ha2, ha3)
+    player_node = files.nodes.Node(home_addr, 'end', '0x00.0x13F.0x40', home_name)
+    #test print
+    print(player_node.addr, player_node.dname)
